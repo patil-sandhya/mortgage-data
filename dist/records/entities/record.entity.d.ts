@@ -1,0 +1,31 @@
+import { Batch } from "../../batches/entities/batch.entity";
+import { User } from "../../users/entities/user.entity";
+export declare class Record {
+    id: string;
+    property_address: string;
+    transaction_date: Date;
+    borrower_name: string;
+    loan_officer_name: string;
+    loan_amount: number;
+    nmls_id: number;
+    loan_term: number;
+    sales_price: number;
+    down_payment: number;
+    apn: string;
+    status: "Pending" | "Verified" | "Flagged";
+    locked_by: string | null;
+    lock_timestamp: Date | null;
+    entered_by: string;
+    entered_by_date: Date;
+    reviewed_by: string;
+    reviewed_by_date: Date;
+    created_at: Date;
+    updated_at: Date;
+    assigned_to: string | null;
+    batch_id?: string;
+    batch?: Batch;
+    entered_by_user?: User;
+    assigned_to_user?: User;
+    reviewed_by_user?: User;
+    locked_by_user?: User;
+}
