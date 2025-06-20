@@ -4,7 +4,7 @@ import { AppModule } from './app.module';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.enableCors({
-    origin: 'https://mortgagepro-nine.vercel.app', 
+    origin: ['http://localhost:3000', 'https://mortgagepro-nine.vercel.app'], 
     credentials: true,              
   });
 
